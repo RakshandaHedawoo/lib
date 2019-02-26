@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBookTable extends Migration
+class CreateLoginTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateBookTable extends Migration
      */
     public function up()
     {
-        Schema::create('_book', function (Blueprint $table) {
+        Schema::create('login', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('FullName');
+            $table->text('Email');
+            $table->text('Password');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateBookTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_book');
+        Schema::dropIfExists('login');
     }
 }

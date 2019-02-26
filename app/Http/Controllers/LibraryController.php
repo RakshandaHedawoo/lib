@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Library;
 use Illuminate\Http\Request;
 
 class LibraryController extends Controller
@@ -39,4 +39,5 @@ class LibraryController extends Controller
    $books->update();
    return redirect()->route('books.index');
  }
+
 }

@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Library extends Model
 {
-    protected $table="books";
+    protected $table="_books";
     protected $fillable=['title','author','price'];
 }
